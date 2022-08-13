@@ -29,29 +29,10 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
-}
-
-/*BODY DARK AREA*/
-
-body.dark{
-    /*COLOR AREA*/
-    --primary-color:#3A3B3C;
-    --panel-color: #242526;
-    --text-color: #CCC;
-    --black-light-color: #CCC;
-    --border-color:#4D4C4C;
-    --toggle-color:#FFF;
-    --box1-color:#3A3B3C;
-    --box2-color:#3A3B3C;
-    --box3-color:#3A3B3C;
-    --title-icon-color:#CCC;
-
-
 }
 
 nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -126,10 +107,6 @@ nav .menu-items{
     background-color: var(--primary-color);
 }
 
-body.dark li a:hover:before{
-    background-color: var(--text-color);
-}
-
 .menu-items li a i{
     font-size: 24px;
     min-width: 45px;
@@ -157,58 +134,11 @@ nav.close li a .link-name{
     color: var(--primary-color);
 }
 
-body.dark .nav-links li a:hover i,
-body.dark .nav-links li a:hover .link-name{
-    color: var(--text-color);
-}
-
 .menu-items  .logout-mode{
     padding-top: 10px;
     border-top: 1px solid var(--border-color);
 }
 
-.menu-items .mode{
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.menu-items .mode-toggle{
-    position: absolute;
-    right: 14px;
-    height: 50px;
-    min-width: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.mode-toggle .switch{
-    position: relative;
-    display: inline-block;
-    height: 22px;
-    width: 40px;
-    border-radius: 25px;
-    background-color: var(--toggle-color);
-}
-
-.switch:before{
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 15px;
-    width: 15px;
-    background-color: var(--panel-color);
-    border-radius: 50%;
-    transition: var(--tran-03);
-}
-
-body.dark .switch:before{
-    left: 20px;
-}
 
 /*DASHBOARD TOP AREA*/
 
@@ -238,6 +168,7 @@ nav.close ~ .dashboard{
     background-color: var(--panel-color);
     padding: 10px 14px;
     transition: var(--tran-05);
+    z-index: 10;
 }
 
 nav.close ~.dashboard .top{
@@ -292,6 +223,7 @@ nav.close ~.dashboard .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .dash-content .boxes .box{
@@ -333,8 +265,9 @@ nav.close ~.dashboard .top{
 /*BOARD TABLE AREA*/
 
 .board{
+    margin-top: 30px;
     overflow: auto;
-    background: #fff;
+    background: var(--panel-color);
 }
 
 .board p{
@@ -382,3 +315,6 @@ tbody tr td{
     color: #554cd1;
     font-weight: 600;
 }
+
+
+

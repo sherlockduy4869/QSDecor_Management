@@ -4,14 +4,21 @@ $(document).ready(function(){
          sidebar = body.querySelector("nav"),
          sidebarToggle = body.querySelector(".sidebar-toggle");
 
-    //Switch between dark and light theme
-    modeToggle.addEventListener("click", function(){
-        body.classList.toggle("dark");
-    });
+    let getStatus = localStorage.getItem("status");
+    if(getStatus && getStatus === "close"){
+        sidebar.classList.toggle("close");
+    }
 
     //Display and hide menu bar
     sidebarToggle.addEventListener("click", function(){
         sidebar.classList.toggle("close");
+
+        if(sidebar.classList.contains("close")){
+            localStorage.setItem("status", "close");
+        }
+        else{
+            localStorage.setItem("status", "open");
+        }
     });
 
     //Data table for tbl_cart
