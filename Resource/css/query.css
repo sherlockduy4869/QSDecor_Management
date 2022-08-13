@@ -57,12 +57,37 @@
         width: calc(100% / 2 - 15px);
         margin-top: 15px;
     }
-}
 
+    .dashboard .top span{
+        font-size: 1.2rem;
+    }
+}
 
 @media(max-width: 560px){
     .dash-content .boxes .box{
         width: 100%;
+    }
+
+    .container{
+        max-width: 100%;
+    }
+
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .dashboard .top span{
+        font-size: 1rem;
     }
 }
 
@@ -116,6 +141,28 @@
     }
 
     .dashboard .top .sidebar-toggle{
+        display: none;
+    }
+
+    .container{
+        max-width: 100%;
+    }
+
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .dashboard .top span{
         display: none;
     }
 }

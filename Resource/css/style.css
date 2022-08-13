@@ -20,11 +20,15 @@
     --box2-color:#FFE6AC;
     --box3-color:#E7D1FC;
     --title-icon-color:#fff;
+    --color-light: rgba(132,139,200,0.18);
 
     /*TRANSITION AREA*/
     --tran-05: all 0.5s ease;
     --tran-03: all 0.3s ease;
     --tran-02: all 0.2s ease;
+
+    /*BOX SHADOW AREA*/
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 body{
@@ -171,6 +175,10 @@ nav.close ~ .dashboard{
     z-index: 10;
 }
 
+.dashboard .top span{
+    font-size: 1.5rem;
+}
+
 nav.close ~.dashboard .top{
     left: 73px;
     width: calc(100% - 73px);
@@ -315,6 +323,113 @@ tbody tr td{
     color: #554cd1;
     font-weight: 600;
 }
+
+/*-----------------------CART ADD AREA-----------------------*/
+
+.boddyy{
+    margin-top: 70px;
+    display: flex;
+    max-height: 300vh;
+    justify-content: center;
+    align-items: center;    
+    padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100%/2 - 20px);
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input,
+.user-details .input-box select{
+    height: 36px;
+    width: 100%;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 300ms ease;
+}
+
+.user-details .input-box textarea{
+    height: 108px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 300ms ease;
+    color: black;
+}
+
+.container form .note{
+    height: 75px;
+    margin-bottom: 5px;
+}
+
+.container form .button{
+    height: 35px;
+    margin: 25px 0;
+}
+
+.container form .button input,
+.container form .button button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.container form .button button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container form .note .selling_note{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 300ms ease;
+    color: black;
+}
+
 
 
 
