@@ -32,6 +32,24 @@ body{
     background-color: var(--primary-color);
 }
 
+/*BODY DARK AREA*/
+
+body.dark{
+    /*COLOR AREA*/
+    --primary-color:#3A3B3C;
+    --panel-color: #242526;
+    --text-color: #CCC;
+    --black-light-color: #CCC;
+    --border-color:#4D4C4C;
+    --toggle-color:#FFF;
+    --box1-color:#3A3B3C;
+    --box2-color:#3A3B3C;
+    --box3-color:#3A3B3C;
+    --title-icon-color:#CCC;
+
+
+}
+
 nav{
     position: absolute;
     top: 0;
@@ -152,4 +170,9 @@ nav .menu-items{
     width: 15px;
     background-color: var(--panel-color);
     border-radius: 50%;
+    transition: var(--tran-03);
+}
+
+body.dark .switch:before{
+    left: 20px;
 }
