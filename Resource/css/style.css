@@ -58,6 +58,12 @@ nav{
     width: 250px;
     padding: 10px 14px;
     background-color: var(--panel-color);
+    border-right: 1px solid var(--border-color);
+    transition: var(--tran-05);
+}
+
+nav.close{
+    width: 73px;
 }
 
 nav .logo-name{
@@ -82,6 +88,12 @@ nav .logo-name .logo_name{
     font-size: 22px;
     font-weight: 600;
     color: var(--text-color);
+    transition: var(--tran-05);
+}
+
+nav.close .logo_name{
+    opacity: 0;
+    pointer-events: none; 
 }
 
 nav .menu-items{
@@ -114,6 +126,10 @@ nav .menu-items{
     background-color: var(--primary-color);
 }
 
+body.dark li a:hover:before{
+    background-color: var(--text-color);
+}
+
 .menu-items li a i{
     font-size: 24px;
     min-width: 45px;
@@ -128,6 +144,12 @@ nav .menu-items{
     font-size: 18px;
     font-weight: 400;
     color: var(--black-light-color);
+    transition: var(--tran-05);
+}
+
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none; 
 }
 
 .nav-links li a:hover i,
@@ -135,9 +157,20 @@ nav .menu-items{
     color: var(--primary-color);
 }
 
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name{
+    color: var(--text-color);
+}
+
+.menu-items  .logout-mode{
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
 .menu-items .mode{
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .menu-items .mode-toggle{
@@ -175,4 +208,177 @@ nav .menu-items{
 
 body.dark .switch:before{
     left: 20px;
+}
+
+/*DASHBOARD TOP AREA*/
+
+.dashboard{
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    height: 100vh;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+}
+
+nav.close ~ .dashboard{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top{
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 250px);
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--panel-color);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+}
+
+nav.close ~.dashboard .top{
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top .sidebar-toggle{
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.top img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+/*DASHBOARD CONTENT AREA*/
+
+.dashboard .dash-content{
+    padding-top: 50px;
+}
+
+.dash-content .title{
+    display: flex;
+    align-items: center;
+    margin: 60px 0 30px 0;
+}
+
+.dash-content .title i{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: var(--title-icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.dash-content .title .text{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.dash-content .boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-content .boxes .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    width: calc(100 / 3 - 15px);
+    padding: 15px 20px;
+    background-color: var(--box1-color);
+}
+
+.boxes .box i{
+    font-size: 35px;
+    color: var(--text-color);
+}
+
+.boxes .box .text{
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.boxes .box .number{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.boxes .box.box2{
+    background-color: var(--box2-color);
+}
+
+.boxes .box.box3{
+    background-color: var(--box3-color);
+}
+
+/*BOARD TABLE AREA*/
+
+.board{
+    overflow: auto;
+    background: #fff;
+}
+
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+
+.board .people{
+    text-align: start;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid #eef0f3;
+}
+
+thead tr th{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding: 15px;
+}
+
+tbody tr td{
+    padding: 10px 15px;
+}
+
+.active p{
+    background: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+.edit a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #554cd1;
+    font-weight: 600;
 }
