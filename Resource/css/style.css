@@ -65,7 +65,6 @@ nav .logo-image{
 nav .logo-image img{
     width: 40px;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 nav .logo-name .logo_name{
@@ -173,6 +172,7 @@ nav.close ~ .dashboard{
     padding: 10px 14px;
     transition: var(--tran-05);
     z-index: 10;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .dashboard .top span{
