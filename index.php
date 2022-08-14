@@ -1,3 +1,7 @@
+<?php 
+    // pass database: 5yJ^ZvEL3YOS1m^(
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
