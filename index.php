@@ -49,9 +49,9 @@
                     <table id="tbl_cart" width="100%">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th>ID</th>
                                 <th>ORDER INFO</th>
-                                <th>COLLAB INFO</th>
+                                <th>IN CHARGE</th>
                                 <th>CUSTOMER INFO</th>
                                 <th>SELL PRICE</th>
                                 <th>SHIPPING FEE</th>
@@ -60,29 +60,50 @@
                                 <th>PAYMENT</th>
                                 <th>NOTE</th>
                                 <th>ORDER DATE</th>
+                                <th>MARKDONE</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>ID</td>
                                 <td class="people">
                                     <div class="people-de">
-                                        <h6>John Doe</h6>
-                                        <p>john@gmail.com</p>
+                                        <h6>Product Name</h6>
+                                        <p>Sell Chanel</p>
                                     </div>
                                 </td>
-                                <td class="people-des">
-                                    <h6>Software Developer</h6>
-                                    <p>Web dev</p>
+                                <td class="role">
+                                    <p>Collaborator Name</p>
+                                </td>
+                                <td class="people">
+                                    <div class="people-de">
+                                        <h6>Cus Name</h6>
+                                        <p>Cus Phone - Cus Address</p>
+                                    </div>
                                 </td>
                                 <td class="active">
-                                    <p>Active</p>
+                                    <p>Sell Price</p>
                                 </td>
                                 <td class="role">
-                                    <p>Owner</p>
+                                    <p>Ship Fee</p>
+                                </td>
+                                <td class="role">
+                                    <p>Other Fee</p>
+                                </td>
+                                <td class="role">
+                                    <p>Deposit</p>
+                                </td>
+                                <td class="active">
+                                    <p>Payment</p>
+                                </td>
+                                <td class="role">
+                                    <p>Note</p>
+                                </td>
+                                <td class="active">
+                                    <p>Order Date</p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">Edit</a>
+                                    <a href="#">MARKDONE</a>
                                 </td>
                             </tr>
                         </tbody>

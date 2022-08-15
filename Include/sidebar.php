@@ -9,20 +9,24 @@
         <div class="menu-items">
             <ul class="nav-links">
                 <li><a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="link-name">ORDER</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
+                    <i class="fa-brands fa-product-hunt"></i>
+                    <span class="link-name">PRODUCT</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
+                    <i class="fas fa-hands-helping"></i>
+                    <span class="link-name">PARTNER</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
+                    <i class="fas fa-user-check"></i>
+                    <span class="link-name">COLLAB</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-user"></i>
+                    <span class="link-name">USER</span>
                 </a></li>
             </ul>
             <ul class="logout-mode">
