@@ -108,6 +108,12 @@
                         <span class="text">Total</span>
                         <span class="number">10000</span>
                     </div>
+
+                    <div class="box box3">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total</span>
+                        <span class="number">10000</span>
+                    </div>
                 </div>
             </div>
 

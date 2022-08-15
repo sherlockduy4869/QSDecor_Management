@@ -239,9 +239,10 @@ nav.close ~.dashboard .top{
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
-    width: calc(100 / 3 - 15px);
+    width: calc(100% / 4 - 12px);
     padding: 15px 20px;
     background-color: var(--box1-color);
+    text-align: center;
 }
 
 .dash-content .boxes .box span{
