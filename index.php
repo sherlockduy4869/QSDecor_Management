@@ -1,5 +1,5 @@
 <?php 
-    // pass database: 5yJ^ZvEL3YOS1m^(
+    // pass database: t(]BNHxg6;M;hW)Z
     //
 ?>
 
@@ -94,19 +94,19 @@
                     <div class="box box1">
                         <i class="uil uil-thumbs-up"></i>
                         <span class="text">Total</span>
-                        <span class="number">100</span>
+                        <span class="number">10000</span>
                     </div>
 
                     <div class="box box2">
                         <i class="uil uil-thumbs-up"></i>
                         <span class="text">Total</span>
-                        <span class="number">100</span>
+                        <span class="number">10000</span>
                     </div>
 
                     <div class="box box3">
                         <i class="uil uil-thumbs-up"></i>
                         <span class="text">Total</span>
-                        <span class="number">100</span>
+                        <span class="number">10000</span>
                     </div>
                 </div>
             </div>

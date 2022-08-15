@@ -244,6 +244,10 @@ nav.close ~.dashboard .top{
     background-color: var(--box1-color);
 }
 
+.dash-content .boxes .box span{
+    width: 100%;
+}
+
 .boxes .box i{
     font-size: 35px;
     color: var(--text-color);
