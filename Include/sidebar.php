@@ -1,8 +1,8 @@
 <!--NAV AREA-->
     <nav>
-        <div class="logo-name">
+        <div class="logo-name clickable">
             <div class="logo-image">
-                <img src="/Resource/img/logo.jpeg" alt="">
+                <a style="text-decoration: none;" href="index.php"><img src="/Resource/img/logo.jpeg" alt=""></a>
             </div>
             <span class="logo_name">QSDECOR</span>
         </div>

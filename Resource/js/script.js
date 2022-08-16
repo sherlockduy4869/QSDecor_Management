@@ -29,4 +29,9 @@ $(document).ready(function(){
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
     } );
+
+    //Div clickable
+    $('.clickable').click(function(){
+        window.location = $(this).find("a").attr("href");
+    });
 })
