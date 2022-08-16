@@ -1,9 +1,17 @@
 <?php 
     include_once "Include/header.php";
     include_once "Include/sidebar.php";
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Class/collabClass.php';
 ?>
 <?php
+    $collabClass = new collabClass();
+    $collabList = $collabClass->show_collab();
 
+    if(isset($_GET['delID']))
+    {
+        $delID = $_GET['delID'];
+        $delCollab = $collabClass->delete_collab($delID);
+    }  
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -30,56 +38,47 @@
                                 <th>Phone</th>
                                 <th>Zalo</th>
                                 <th>Email</th>
-                                <th>Address</th>
-                                <th>Working Date</th>
                                 <th>Bank Name</th>
                                 <th>Bank Number</th>
                                 <th>Customize</th>
                         </thead>
                         <?php
-                            // if($orderList)
-                            // {   
-                            //     $ID = 0;
-                            //     while($result = $orderList->fetch_assoc())
-                            //     {
-                            //         $ID++;
-                            //         $order_date = date("d-m-Y", strtotime($result['ORDER_DATE']));
+                            if($collabList)
+                            {   
+                                $ID = 0;
+                                while($result = $collabList->fetch_assoc())
+                                {
+                                    $ID++;
                         ?>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td><?php echo $ID; ?></td>
                                 <td class="active">
-                                    <p>Name</p>
+                                    <p><?php echo $result['COLLAB_NAME'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Phone</p>
-                                </td>
-                                <td class="active">
-                                    <p>Zalo</p>
-                                </td>
-                                <td class="role">
-                                    <p>Email</p>
-                                </td>
-                                <td class="role">
-                                    <p>Address</p>
-                                </td>
-                                <td class="role">
-                                    <p>Working Date</p>
-                                </td>
-                                <td class="role">
-                                    <p>Bank Name</p>
+                                    <p><?php echo $result['COLLAB_PHONE'];?></p>
                                 </td>
                                 <td class="active">
-                                    <p>Bank Number</p>
+                                    <p><?php echo $result['COLLAB_ZALO'];?></p>
+                                </td>
+                                <td class="role">
+                                    <p><?php echo $result['COLLAB_EMAIL'];?></p>
+                                </td>
+                                <td class="role">
+                                    <p><?php echo $result['COLLAB_BANK_NAME'];?></p>
+                                </td>
+                                <td class="active">
+                                    <p><?php echo $result['COLLAB_BANK_NUMBER'];?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">Edit</a>|<a href="#">Delete</a>
+                                    <a href="#">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['COLLAB_ID'];?>">Delete</a>
                                 </td>
                             </tr>
                         </tbody>
                         <?php
-                            //     }
-                            // }
+                                }
+                            }
                         ?>
                     </table>
                 </div>

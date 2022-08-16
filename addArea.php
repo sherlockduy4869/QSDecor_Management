@@ -24,7 +24,7 @@
 
                     <div class="box box2">
                         <i class="fa-solid fa-circle-plus"></i>
-                        <span class="number"><a class="add_area" href="collabAdd.php">ADD ORDER</a></span>
+                        <span class="number"><a class="add_area" href="collabAdd.php">ADD COLLAB</a></span>
                     </div>
 
                     <div class="box box3">

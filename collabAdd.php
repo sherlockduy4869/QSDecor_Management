@@ -5,7 +5,12 @@
 ?>
 
 <?php
-    
+    $collabClass = new collabClass();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+
+        $collabAdd = $collabClass->insert_collab($_POST);
+    }
 ?>
 
 <!--DASHBOARD AREA-->
@@ -31,26 +36,26 @@
                             <input type="text"required name="collab_phone">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Zalo</span>
-                            <input type="text"required name="collab_zalo">
-                        </div>
-                        <div class="input-box">
-                            <span class="details">Collab Email</span>
-                            <input type="email"required name="collab_email">
-                        </div>
-                        <div class="input-box">
                             <span class="details">Bank Name</span>
                             <input type="text"required name="bank_name">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Collab Zalo</span>
+                            <input type="text"required name="collab_zalo">
                         </div>
                         <div class="input-box">
                             <span class="details">Bank Number</span>
                             <input type="number"required name="bank_number">
                         </div>
+                        <div class="input-box">
+                            <span class="details">Collab Email</span>
+                            <input type="email"required name="collab_email">
+                        </div>
                     </div>
                     <?php 
-                    if(isset($orderAdd))
+                    if(isset($collabAdd))
                     {
-                        echo $orderAdd;
+                        echo $collabAdd;
                     }
                     ?>
                     <div class="button">
