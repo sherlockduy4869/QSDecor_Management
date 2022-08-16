@@ -38,6 +38,8 @@
             $bytes = random_bytes(6);
             $order_id = 'OD.'.bin2hex($bytes);
             $payment = $sell_price + $ship_fee - $deposit + $others_fee;
+
+            date_default_timezone_set("Asia/Ho_Chi_Minh");
             $order_date = date("Y-m-d");
 
             $query = "INSERT INTO tbl_order(ORDER_ID,PRODUCT_QUAN_PRICE,SELL_CHANEL,COLLAB_ID,CUSTOMER_NAME,
@@ -54,6 +56,21 @@
                 $alert = "<span class = 'addError'>Add order failed</span> <br>";
                 return $alert;
             }
+        }
+
+        //Show all order
+        public function show_order(){
+            $query = "SELECT * FROM tbl_order";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        //Delete apartment selling
+        public function delete_order($delID){
+            $query = "DELETE FROM tbl_order WHERE ORDER_ID = '$delID'";
+            $result = $this->db->delete($query);
+
+            header('Location:index.php');
         }
     }
 ?>

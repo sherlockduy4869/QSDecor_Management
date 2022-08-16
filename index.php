@@ -1,6 +1,17 @@
 <?php 
     include_once "Include/header.php";
     include_once "Include/sidebar.php";
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Class/orderClass.php';
+?>
+<?php
+    $orderClass = new orderClass();
+    $orderList = $orderClass->show_order();
+
+    if(isset($_GET['delID']))
+    {
+        $delID = $_GET['delID'];
+        $delOrder = $orderClass->delete_order($delID);
+    }  
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -62,51 +73,60 @@
                                 <th>MARKDONE</th>
                             </tr>
                         </thead>
+                        <?php
+                            if($orderList)
+                            {   
+                                $ID = 0;
+                                while($result = $orderList->fetch_assoc())
+                                {
+                                    $ID++;
+                                    $order_date = date("d-m-Y", strtotime($result['ORDER_DATE']));
+                        ?>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td class="people">
-                                    <div class="people-de">
-                                        <h6>Product Name</h6>
-                                        <p>Sell Chanel</p>
-                                    </div>
+                                <td><?php echo $ID; ?></td>
+                                <td class="role">
+                                    <p><?php echo $result['PRODUCT_QUAN_PRICE'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Collaborator Name</p>
+                                    <p><?php echo $result['COLLAB_ID'];?>-<?php echo $result['SELL_CHANEL'];?></p>
                                 </td>
                                 <td class="people">
                                     <div class="people-de">
-                                        <h6>Cus Name</h6>
-                                        <p>Cus Phone - Cus Address</p>
+                                        <h6><?php echo $result['CUSTOMER_NAME'];?></h6>
+                                        <p><?php echo $result['CUSTOMER_PHONE'];?> - <?php echo $result['CUSTOMER_ADDRESS'];?></p>
                                     </div>
                                 </td>
                                 <td class="active">
-                                    <p>Sell Price</p>
+                                    <p><?php echo number_format($result['SELL_PRICE']);?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Ship Fee</p>
+                                    <p><?php echo number_format($result['SHIPPING_FEE']);?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Other Fee</p>
+                                    <p><?php echo number_format($result['OTHERS_FEE']);?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Deposit</p>
+                                    <p><?php echo number_format($result['DEPOSIT']);?></p>
                                 </td>
                                 <td class="active">
-                                    <p>Payment</p>
+                                    <p><?php echo number_format($result['PAYMENT']);?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Note</p>
+                                    <p><?php echo $result['NOTE'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p>Order Date</p>
+                                    <p><?php echo $order_date;?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">EDIT</a><br>
-                                    <a href="#">DELETE</a>
+                                    <a href="#">EDIT</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a>
                                 </td>
                             </tr>
                         </tbody>
+                        <?php
+                                }
+                            }
+                        ?>
                     </table>
                 </div>
                 
