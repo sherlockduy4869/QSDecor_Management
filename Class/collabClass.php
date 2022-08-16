@@ -42,9 +42,45 @@
             }
         }
 
+        //Edit new collab
+        public function edit_collab($data,$collab_id){
+            $collab_name = mysqli_real_escape_string($this->db->link, $data['collab_name']);
+            $collab_phone = mysqli_real_escape_string($this->db->link, $data['collab_phone']);
+            $collab_zalo = mysqli_real_escape_string($this->db->link, $data['collab_zalo']);
+            $collab_email = mysqli_real_escape_string($this->db->link, $data['collab_email']);
+            $bank_name = mysqli_real_escape_string($this->db->link, $data['bank_name']);
+            $bank_number = mysqli_real_escape_string($this->db->link, $data['bank_number']);
+
+            $query = "UPDATE tbl_collaborator SET
+                    COLLAB_NAME = '$collab_name'
+                    ,COLLAB_PHONE = '$collab_phone'
+                    ,COLLAB_ZALO = '$collab_zalo'
+                    ,COLLAB_EMAIL = '$collab_email'
+                    ,COLLAB_BANK_NAME = '$bank_name'
+                    ,COLLAB_BANK_NUMBER = '$bank_number'
+                    WHERE COLLAB_ID ='$collab_id'";
+            $result = $this->db->update($query);
+
+            if($result){
+                $alert = "<span class = 'addSuccess'>Edit collaborator infor succesfully</span> <br>";
+                return $alert;
+            }
+            else{
+                $alert = "<span class = 'addError'>Edit collaborator inforfailed</span> <br>";
+                return $alert;
+            }
+        }
+
         //Show all collab
         public function show_collab(){
             $query = "SELECT * FROM tbl_collaborator";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        //Get collab infor by id
+        public function get_collab_info_by_id($collab_id){
+            $query = "SELECT * FROM tbl_collaborator WHERE COLLAB_ID = '$collab_id'";
             $result = $this->db->select($query);
             return $result;
         }

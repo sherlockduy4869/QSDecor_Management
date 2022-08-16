@@ -72,7 +72,7 @@
                                     <p><?php echo $result['COLLAB_BANK_NUMBER'];?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['COLLAB_ID'];?>">Delete</a>
+                                    <a href="collabEdit.php?editID=<?php echo $result['COLLAB_ID'];?>">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['COLLAB_ID'];?>">Delete</a>
                                 </td>
                             </tr>
                         </tbody>
