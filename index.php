@@ -89,7 +89,7 @@
                                     <p><?php echo $result['PRODUCT_QUAN_PRICE'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p><?php echo $result['COLLAB_ID'];?>-<?php echo $result['SELL_CHANEL'];?></p>
+                                    <p><?php echo $result['COLLAB_NAME'];?>-<?php echo $result['SELL_CHANEL'];?></p>
                                 </td>
                                 <td class="people">
                                     <div class="people-de">

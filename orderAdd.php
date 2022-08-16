@@ -2,10 +2,14 @@
     include_once "Include/header.php";
     include_once "Include/sidebar.php";
     include_once $_SERVER['DOCUMENT_ROOT'].'/Class/orderClass.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Class/collabClass.php';
 ?>
 
 <?php
     $orderClass = new orderClass();
+    $collabClass = new collabClass();
+
+    $collabList = $collabClass->show_collab();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 
@@ -47,8 +51,19 @@
                             <span class="details">Collaborator</span>
                             <input list="collab_list" name="collab" required>
                             <datalist id="collab_list">
-                                <option value="1">Tran Dinh Duy</option>
-                                <option value="2">Tran Dinh Van</option>
+                                <?php
+                                    if($collabList)
+                                    {   
+                                        $ID = 0;
+                                        while($result = $collabList->fetch_assoc())
+                                        {
+                                    
+                                ?>
+                                    <option value="<?php echo $result['COLLAB_ID']; ?>"><?php echo $result['COLLAB_NAME']; ?></option>
+                                <?php
+                                        }
+                                    }
+                                ?>
                             </datalist>
                         </div>
                         <div class="input-box">

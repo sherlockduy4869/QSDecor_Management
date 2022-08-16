@@ -60,7 +60,9 @@
 
         //Show all order
         public function show_order(){
-            $query = "SELECT * FROM tbl_order";
+            $query = "SELECT tbl_order.*, tbl_collaborator.COLLAB_NAME 
+                    FROM tbl_order INNER JOIN tbl_collaborator
+                    ON  tbl_order.COLLAB_ID = tbl_collaborator.COLLAB_ID";
             $result = $this->db->select($query);
             return $result;
         }
