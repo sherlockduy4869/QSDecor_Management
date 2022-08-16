@@ -9,12 +9,11 @@
             <span>WELCOME TO <span style="color: red;">QSDECOR</span> MANAGEMENT</span>
             <img src="/Resource/img/profile-1.jpg" alt="">
         </div>
-
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast"></i>
-                    <span class="text">Dashboard</span>
+                    <span class="text">ORDER</span>
                 </div>
 
                 <div class="boxes">
@@ -60,6 +59,7 @@
                                 <th>PAYMENT</th>
                                 <th>NOTE</th>
                                 <th>ORDER DATE</th>
+                                <th>STATUS</th>
                                 <th>MARKDONE</th>
                             </tr>
                         </thead>
@@ -99,11 +99,15 @@
                                 <td class="role">
                                     <p>Note</p>
                                 </td>
-                                <td class="active">
+                                <td class="role">
                                     <p>Order Date</p>
                                 </td>
+                                <td class="active">
+                                    <p>Status</p>
+                                </td>
                                 <td class="edit">
-                                    <a href="#">MARKDONE</a>
+                                    <a href="#">MARKDONE</a><br>
+                                    <a href="#">DELETE</a>
                                 </td>
                             </tr>
                         </tbody>

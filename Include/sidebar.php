@@ -8,7 +8,11 @@
         </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="addArea.php">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span class="link-name">Add</span>
+                </a></li>
+                <li><a href="index.php">
                     <i class="fa-solid fa-bell"></i>
                     <span class="link-name">ORDER</span>
                 </a></li>
@@ -25,7 +29,7 @@
                     <span class="link-name">COLLAB</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-user"></i>
+                    <i class="fa-solid fa-users"></i>
                     <span class="link-name">USER</span>
                 </a></li>
             </ul>
