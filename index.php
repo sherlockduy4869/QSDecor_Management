@@ -48,7 +48,7 @@
                     <table id="tbl_cart" width="100%">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>STT</th>
                                 <th>ORDER INFO</th>
                                 <th>IN CHARGE</th>
                                 <th>CUSTOMER INFO</th>
@@ -59,13 +59,12 @@
                                 <th>PAYMENT</th>
                                 <th>NOTE</th>
                                 <th>ORDER DATE</th>
-                                <th>STATUS</th>
                                 <th>MARKDONE</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>ID</td>
+                                <td>1</td>
                                 <td class="people">
                                     <div class="people-de">
                                         <h6>Product Name</h6>
@@ -102,11 +101,8 @@
                                 <td class="role">
                                     <p>Order Date</p>
                                 </td>
-                                <td class="active">
-                                    <p>Status</p>
-                                </td>
                                 <td class="edit">
-                                    <a href="#">MARKDONE</a><br>
+                                    <a href="#">EDIT</a><br>
                                     <a href="#">DELETE</a>
                                 </td>
                             </tr>

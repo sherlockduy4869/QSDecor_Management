@@ -1,13 +1,23 @@
 <?php 
     include_once "Include/header.php";
     include_once "Include/sidebar.php";
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Class/orderClass.php';
+?>
+
+<?php
+    $orderClass = new orderClass();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+
+        $orderAdd = $orderClass->insert_order($_POST);
+    }
 ?>
 
 <!--DASHBOARD AREA-->
     <section class="dashboard">
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
-            <span>WELCOME TO QSDECOR MANAGEMENT</span>
+            <span>WELCOME TO <span style="color: red;">QSDECOR</span> MANAGEMENT</span>
             <img src="/Resource/img/profile-1.jpg" alt="">
         </div>
 
@@ -15,12 +25,11 @@
             <div class="container">
                 <div class="title">Add New Order</div>
 
-                <form action="#">
+                <form action="orderAdd.php" method="POST">
                     <div class="user-details">
-
                         <div class="input-box">
                             <span class="details">[Product/Quantity/Price]</span>
-                            <input type="text"required>
+                            <input type="text"required name="product_quan_price">
                         </div>
                         <div class="input-box">
                             <span class="details">Sell Chanel</span>
@@ -41,45 +50,72 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Total Sell Price</span>
-                            <input type="text"required>
+                            <input class="sell_price" name="sell_price" type="text"required>
                         </div>
                         <div class="input-box">
                             <span class="details">Customer Name</span>
-                            <input type="text"required>
+                            <input type="text" name="cus_name" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Shipping Fee</span>
-                            <input type="text"required>
+                            <input class="shipping_fee" name="shipping_fee" type="text"required>
                         </div>
                         <div class="input-box">
                             <span class="details">Customer Phone</span>
-                            <input type="text" required>
+                            <input type="text" name="cus_phone" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Deposit</span>
-                            <input type="text"required>
+                            <input class="deposit" name="deposit" type="text"required>
                         </div>
                         <div class="input-box">
                             <span class="details">Customer Address</span>
-                            <input type="text" required>
+                            <input type="text" name="cus_address" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Others Fee</span>
-                            <input type="text"required>
-                        </div>
-                        
+                            <input class="other_fee" name="others_fee" type="text"required>
+                        </div>   
                     </div>
                     <div class="note">
                         <textarea class="selling_note" name="note" cols="30" rows="10"></textarea>
                     </div>
+                    <?php 
+                    if(isset($orderAdd))
+                    {
+                        echo $orderAdd;
+                    }
+                    ?>
                     <div class="button">
-                        <input class="btn btn-primary" type="submit" value="ADDING">
+                        <input class="btn btn-primary" name="submit" type="submit" value="ADDING">
                     </div>
                 </form>
                 
             </div>
         </div>
     </section>
+
+<script>
+    new Cleave('.sell_price', {
+        numeral: true,
+        numeralThousandGroupStyle: 'thousand'
+    });
+
+    new Cleave('.shipping_fee', {
+        numeral: true,
+        numeralThousandGroupStyle: 'thousand'
+    });
+
+    new Cleave('.deposit', {
+        numeral: true,
+        numeralThousandGroupStyle: 'thousand'
+    });
+
+    new Cleave('.other_fee', {
+        numeral: true,
+        numeralThousandGroupStyle: 'thousand'
+    });
+</script>
 
 <?php 
     include_once "Include/footer.php";

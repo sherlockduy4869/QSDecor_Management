@@ -442,6 +442,17 @@ form .user-details .input-box{
     color: black;
 }
 
+/*ALERT AREA*/
 
+.addSuccess{
+    color: rgb(2, 230, 2);
+    margin-bottom: 10px;
+    position: absolute;
+}
+.addError{
+    margin-bottom: 10px;
+    color: red;
+    position: absolute;
+}
 
 
