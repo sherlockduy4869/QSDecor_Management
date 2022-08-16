@@ -24,7 +24,7 @@
                     <i class="fas fa-hands-helping"></i>
                     <span class="link-name">PARTNER</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="collab.php">
                     <i class="fas fa-user-check"></i>
                     <span class="link-name">COLLAB</span>
                 </a></li>

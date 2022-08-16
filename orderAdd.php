@@ -38,6 +38,9 @@
                                 <option value="Facebook">Facebook</option>
                                 <option value="Cho Tot">Cho Tot</option>
                                 <option value="Zalo">Zalo</option>
+                                <option value="Shoppee">Shoppee</option>
+                                <option value="Gioi Thieu">Gioi Thieu</option>
+                                <option value="Others">Others</option>
                             </datalist>
                         </div>
                         <div class="input-box">

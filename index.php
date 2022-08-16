@@ -119,7 +119,7 @@
                                     <p><?php echo $order_date;?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">EDIT</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a>
+                                    <a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a>
                                 </td>
                             </tr>
                         </tbody>
