@@ -19,16 +19,12 @@
                     <div class="user-details">
 
                         <div class="input-box">
-                            <span class="details">Product Name</span>
-                            <input list="product_list" name="product_name">
-                            <datalist id="product_list">
-                                <option value="Sofa">Sofa</option>
-                                <option value="Giuong">Giuong</option>
-                            </datalist>
+                            <span class="details">[Product/Quantity/Price]</span>
+                            <input type="text"required>
                         </div>
                         <div class="input-box">
                             <span class="details">Sell Chanel</span>
-                            <input list="chanel_list" name="chanel">
+                            <input list="chanel_list" name="chanel" required>
                             <datalist id="chanel_list">
                                 <option value="Facebook">Facebook</option>
                                 <option value="Cho Tot">Cho Tot</option>
@@ -37,14 +33,14 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Collaborator</span>
-                            <input list="collab_list" name="collab">
+                            <input list="collab_list" name="collab" required>
                             <datalist id="collab_list">
                                 <option value="1">Tran Dinh Duy</option>
                                 <option value="2">Tran Dinh Van</option>
                             </datalist>
                         </div>
                         <div class="input-box">
-                            <span class="details">Sell Price</span>
+                            <span class="details">Total Sell Price</span>
                             <input type="text"required>
                         </div>
                         <div class="input-box">

@@ -18,6 +18,7 @@
     <!--JS/JQUERY-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/Resource/js/script.js"></script>
+    <script src="./Resource/js/cleave.js"></script>
 
     <!--DataTables With Print Function-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">

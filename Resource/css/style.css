@@ -267,6 +267,13 @@ nav.close ~.dashboard .top{
     color: var(--text-color);
 }
 
+.boxes .box .number .add_area{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .boxes .box.box2{
     background-color: var(--box2-color);
 }

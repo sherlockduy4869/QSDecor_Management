@@ -18,27 +18,23 @@
 
                 <div class="boxes">
                     <div class="box box1">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total</span>
-                        <span class="number">10000</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
                     <div class="box box2">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total</span>
-                        <span class="number">10000</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
                     <div class="box box3">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total</span>
-                        <span class="number">10000</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
                     <div class="box box3">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="text">Total</span>
-                        <span class="number">10000</span>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
                 </div>
             </div>
