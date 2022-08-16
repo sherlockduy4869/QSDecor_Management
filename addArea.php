@@ -22,14 +22,14 @@
                         <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
+                    <div class="box box3">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span class="number"><a class="add_area" href="partnerAdd.php">ADD PARTNER</a></span>
+                    </div>
+
                     <div class="box box2">
                         <i class="fa-solid fa-circle-plus"></i>
                         <span class="number"><a class="add_area" href="collabAdd.php">ADD COLLAB</a></span>
-                    </div>
-
-                    <div class="box box3">
-                        <i class="fa-solid fa-circle-plus"></i>
-                        <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
                     <div class="box box3">

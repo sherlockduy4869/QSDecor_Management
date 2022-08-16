@@ -20,7 +20,7 @@
                     <i class="fa-brands fa-product-hunt"></i>
                     <span class="link-name">PRODUCT</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="partner.php">
                     <i class="fas fa-hands-helping"></i>
                     <span class="link-name">PARTNER</span>
                 </a></li>
