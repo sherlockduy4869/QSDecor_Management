@@ -7,11 +7,11 @@
     $partnerClass = new partnerClass();
     $partnerList = $partnerClass->show_partner();
 
-    // if(isset($_GET['delID']))
-    // {
-    //     $delID = $_GET['delID'];
-    //     $delCollab = $collabClass->delete_collab($delID);
-    // }  
+    if(isset($_GET['delID']))
+    {
+        $delID = $_GET['delID'];
+        $delPartnet = $partnerClass->delete_partner($delID);
+    }  
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -72,7 +72,7 @@
                                     <p><?php echo $result['NOTE'];?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['PARTNER_ID']; ?>=">Delete</a>
+                                    <a href="partnerEdit.php?editID=<?php echo $result['PARTNER_ID'];?>">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['PARTNER_ID']; ?>">Delete</a>
                                 </td>
                             </tr>
                         </tbody>
