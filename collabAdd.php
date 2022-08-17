@@ -49,7 +49,7 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Collab Email</span>
-                            <input type="email"required name="collab_email">
+                            <input type="email" name="collab_email">
                         </div>
                     </div>
                     <?php 

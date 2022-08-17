@@ -5,12 +5,12 @@
 ?>
 
 <?php
-    // $collabClass = new collabClass();
+    $partnerClass = new partnerClass();
 
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 
-    //     $collabAdd = $collabClass->insert_collab($_POST);
-    // }
+        $partnerAdd = $partnerClass->insert_partner($_POST);
+    }
 ?>
 
 <!--DASHBOARD AREA-->
@@ -25,38 +25,39 @@
             <div class="container">
                 <div class="title">Add New Partner</div>
 
-                <form action="collabAdd.php" method="POST">
+                <form action="partnerAdd.php" method="POST">
                     <div class="user-details">
                         <div class="input-box">
-                            <span class="details">Collab Name</span>
-                            <input type="text"required name="collab_name">
+                            <span class="details">Partner Name</span>
+                            <input type="text"required name="partner_name">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Phone</span>
-                            <input type="text"required name="collab_phone">
+                            <span class="details">Deputy</span>
+                            <input type="text"required name="deputy">
                         </div>
                         <div class="input-box">
-                            <span class="details">Bank Name</span>
-                            <input type="text"required name="bank_name">
+                            <span class="details">Partner Phone</span>
+                            <input type="text"required name="partner_phone">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Zalo</span>
-                            <input type="text"required name="collab_zalo">
+                            <span class="details">Address</span>
+                            <input type="text"required name="address">
                         </div>
                         <div class="input-box">
-                            <span class="details">Bank Number</span>
-                            <input type="number"required name="bank_number">
+                            <span class="details">Partner Email</span>
+                            <input type="email" name="partner_email">
                         </div>
+                        
                         <div class="input-box">
-                            <span class="details">Collab Email</span>
-                            <input type="email"required name="collab_email">
+                            <span class="details">Note</span>
+                            <input type="text" name="note">
                         </div>
                     </div>
                     <?php 
-                        // if(isset($collabAdd))
-                        // {
-                        //     echo $collabAdd;
-                        // }
+                        if(isset($partnerAdd))
+                        {
+                            echo $partnerAdd;
+                        }
                     ?>
                     <div class="button">
                         <input class="btn btn-primary" name="submit" type="submit" value="ADDING">

@@ -4,8 +4,8 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/Class/partnerClass.php';
 ?>
 <?php
-    // $collabClass = new collabClass();
-    // $collabList = $collabClass->show_collab();
+    $partnerClass = new partnerClass();
+    $partnerList = $partnerClass->show_partner();
 
     // if(isset($_GET['delID']))
     // {
@@ -43,42 +43,42 @@
                                 <th>Customize</th>
                         </thead>
                         <?php
-                            // if($collabList)
-                            // {   
-                                // $ID = 0;
-                                // while($result = $collabList->fetch_assoc())
-                                // {
-                                //     $ID++;
+                            if($partnerList)
+                            {   
+                                $ID = 0;
+                                while($result = $partnerList->fetch_assoc())
+                                {
+                                    $ID++;
                         ?>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td class="role">
-                                    <p>Partner Name</p>
-                                </td>
+                                <td><?php echo $ID; ?></td>
                                 <td class="active">
-                                    <p>DEPUTY</p>
-                                </td>
-                                <td class="active">
-                                    <p>PHONE</p>
+                                    <p><?php echo $result['PARTNER_NAME'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p>EMAIL</p>
+                                    <p><?php echo $result['DEPUTY'];?></p>
                                 </td>
                                 <td class="active">
-                                    <p>ADDRESS</p>
+                                    <p><?php echo $result['PHONE'];?></p>
                                 </td>
                                 <td class="role">
-                                    <p>NOTE</p>
+                                    <p><?php echo $result['EMAIL'];?></p>
+                                </td>
+                                <td class="active">
+                                    <p><?php echo $result['ADDRESS'];?></p>
+                                </td>
+                                <td class="role">
+                                    <p><?php echo $result['NOTE'];?></p>
                                 </td>
                                 <td class="edit">
-                                    <a href="#">Edit</a>
+                                    <a href="#">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['PARTNER_ID']; ?>=">Delete</a>
                                 </td>
                             </tr>
                         </tbody>
                         <?php
-                            //     }
-                            // }
+                                }
+                            }
                         ?>
                     </table>
                 </div>
