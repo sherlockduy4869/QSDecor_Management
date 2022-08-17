@@ -23,16 +23,16 @@
 
         <div class="boddyy">
             <div class="container">
-                <div class="title">Add New Collaborator</div>
+                <div class="title">Add New Partner</div>
 
                 <form action="collabAdd.php" method="POST">
                     <div class="user-details">
                         <div class="input-box">
-                            <span class="details">Collab Name</span>
+                            <span class="details">Partner Name</span>
                             <input type="text"required name="collab_name">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Phone</span>
+                            <span class="details">Partner Phone</span>
                             <input type="text"required name="collab_phone">
                         </div>
                         <div class="input-box">
@@ -40,7 +40,7 @@
                             <input type="text"required name="bank_name">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Zalo</span>
+                            <span class="details">Partner Zalo</span>
                             <input type="text"required name="collab_zalo">
                         </div>
                         <div class="input-box">
@@ -48,7 +48,7 @@
                             <input type="number"required name="bank_number">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Email</span>
+                            <span class="details">Partner Email</span>
                             <input type="email" name="collab_email">
                         </div>
                     </div>

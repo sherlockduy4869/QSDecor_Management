@@ -48,7 +48,7 @@
                             </datalist>
                         </div>
                         <div class="input-box">
-                            <span class="details">Collaborator</span>
+                            <span class="details">Partner</span>
                             <input list="collab_list" name="collab" required>
                             <datalist id="collab_list">
                                 <?php

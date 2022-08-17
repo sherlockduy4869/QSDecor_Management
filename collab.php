@@ -24,7 +24,7 @@
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast"></i>
-                    <span class="text">COLLABORATORS</span>
+                    <span class="text">PARTNER</span>
                 </div>
             </div>
 

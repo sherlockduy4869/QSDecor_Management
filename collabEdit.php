@@ -29,16 +29,16 @@
 
         <div class="boddyy">
             <div class="container">
-                <div class="title">Edit Collaborator Info</div>
+                <div class="title">Edit Partner Information</div>
 
                 <form action="" method="POST">
                     <div class="user-details">
                         <div class="input-box">
-                            <span class="details">Collab Name</span>
+                            <span class="details">Partner Name</span>
                             <input value="<?php echo $collabInfo['COLLAB_NAME'] ?>" type="text"required name="collab_name">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Phone</span>
+                            <span class="details">Partner Phone</span>
                             <input value="<?php echo $collabInfo['COLLAB_PHONE'] ?>" type="text"required name="collab_phone">
                         </div>
                         <div class="input-box">
@@ -46,7 +46,7 @@
                             <input value="<?php echo $collabInfo['COLLAB_BANK_NAME'] ?>" type="text"required name="bank_name">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Zalo</span>
+                            <span class="details">Partner Zalo</span>
                             <input value="<?php echo $collabInfo['COLLAB_ZALO'] ?>" type="text"required name="collab_zalo">
                         </div>
                         <div class="input-box">
@@ -54,7 +54,7 @@
                             <input value="<?php echo $collabInfo['COLLAB_BANK_NUMBER'] ?>" type="number"required name="bank_number">
                         </div>
                         <div class="input-box">
-                            <span class="details">Collab Email</span>
+                            <span class="details">Partner Email</span>
                             <input value="<?php echo $collabInfo['COLLAB_EMAIL'] ?>" type="email"required name="collab_email">
                         </div>
                     </div>
