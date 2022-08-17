@@ -70,7 +70,7 @@
                                 <th>PAYMENT</th>
                                 <th>NOTE</th>
                                 <th>ORDER DATE</th>
-                                <th>MARKDONE</th>
+                                <th>CUSTOMIZE</th>
                             </tr>
                         </thead>
                         <?php

@@ -16,14 +16,6 @@
                     <i class="fa-solid fa-bell"></i>
                     <span class="link-name">ORDER</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="fa-brands fa-product-hunt"></i>
-                    <span class="link-name">PRODUCT</span>
-                </a></li>
-                <li><a href="partner.php">
-                    <i class="fas fa-hands-helping"></i>
-                    <span class="link-name">PARTNER</span>
-                </a></li>
                 <li><a href="collab.php">
                     <i class="fas fa-user-check"></i>
                     <span class="link-name">COLLAB</span>
