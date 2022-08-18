@@ -23,7 +23,7 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast"></i>
+                    <i class="fas fa-user-check"></i>
                     <span class="text">PARTNER</span>
                 </div>
             </div>

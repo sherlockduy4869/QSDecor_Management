@@ -5,19 +5,8 @@
 ?>
 <?php
     $orderClass = new orderClass();
-    $orderList = $orderClass->show_order();
+    $salesList = $orderClass->show_sales();
 
-    // if(isset($_GET['delID']))
-    // {
-    //     $delID = $_GET['delID'];
-    //     $delOrder = $orderClass->delete_order($delID);
-    // }  
-
-    // if(isset($_GET['markdoneID']))
-    // {
-    //     $markdoneID = $_GET['markdoneID'];
-    //     $markdoneOrder = $orderClass->markdone_order($markdoneID);
-    // }  
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -29,14 +18,17 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="fa-solid fa-bell"></i>
-                    <span class="text">ORDER LIST</span>
+                    <i class="fa-solid fa-chart-bar"></i>
+                    <span class="text">SALES LIST</span>
+                </div>
+                <div class="date">
+                    <input type="date">
                 </div>
                 <div class="boxes">
                     <div class="box box1">
-                        <i class="uil uil-thumbs-up"></i>
+                        <i class="fa-solid fa-money-bill"></i>
                         <span class="text">Total</span>
-                        <span class="number">10000</span>
+                        <span class="number"><span class="num">10000</span><sup>đ</sup></span>
                     </div>
                 </div>
             <div class="activity">
@@ -54,16 +46,14 @@
                                 <th>PAYMENT</th>
                                 <th>DEPOSIT</th>
                                 <th>BALANCE</th>
-                                <th>NOTE</th>
                                 <th>ORDER DATE</th>
-                                <th>CUSTOMIZE</th>
                             </tr>
                         </thead>
                         <?php
-                            if($orderList)
+                            if($salesList)
                             {   
                                 $ID = 0;
-                                while($result = $orderList->fetch_assoc())
+                                while($result = $salesList->fetch_assoc())
                                 {
                                     $ID++;
                                     $order_date = date("d-m-Y", strtotime($result['ORDER_DATE']));
@@ -102,13 +92,7 @@
                                     <p><?php echo number_format($result['BALANCE']);?><sup>đ</sup></p>
                                 </td>
                                 <td class="role">
-                                    <p><?php echo $result['NOTE'];?></p>
-                                </td>
-                                <td class="role">
                                     <p><?php echo $order_date;?></p>
-                                </td>
-                                <td class="edit">
-                                    <a onclick="return confirm('Do you want to markdone ?')" href="?markdoneID=<?php echo $result['ORDER_ID'];?>">Markdone</a><br><a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a>
                                 </td>
                             </tr>
                         </tbody>

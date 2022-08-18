@@ -16,6 +16,10 @@
                     <i class="fa-solid fa-bell"></i>
                     <span class="link-name">ORDER</span>
                 </a></li>
+                <li><a href="sales.php">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <span class="link-name">SALES</span>
+                </a></li>
                 <li><a href="collab.php">
                     <i class="fas fa-user-check"></i>
                     <span class="link-name">PARTNER</span>

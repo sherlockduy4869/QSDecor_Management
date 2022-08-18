@@ -16,6 +16,8 @@
             $this->fm = new Format();
         }
 
+        /*--------------------ORDER AREA--------------------*/
+
         //Insert new order
         public function insert_order($data){
             $product_quan_price = mysqli_real_escape_string($this->db->link, $data['product_quan_price']);
@@ -84,6 +86,17 @@
             $result = $this->db->delete($query);
 
             header('Location:index.php');
+        }
+
+
+        /*--------------------SALE AREA--------------------*/
+        public function show_sales(){
+            $query = "SELECT tbl_order.*, tbl_collaborator.COLLAB_NAME 
+                    FROM tbl_order INNER JOIN tbl_collaborator
+                    ON  tbl_order.COLLAB_ID = tbl_collaborator.COLLAB_ID
+                    WHERE STATUS_ORDER = 'DONE'";
+            $result = $this->db->select($query);
+            return $result;
         }
     }
 ?>
