@@ -37,15 +37,16 @@
             
             $bytes = random_bytes(6);
             $order_id = 'OD.'.bin2hex($bytes);
-            $payment = $sell_price + $ship_fee - $deposit + $others_fee;
+            $payment = $sell_price + $ship_fee + $others_fee;
+            $balance = $payment - $deposit;
 
             date_default_timezone_set("Asia/Ho_Chi_Minh");
             $order_date = date("Y-m-d");
 
             $query = "INSERT INTO tbl_order(ORDER_ID,PRODUCT_QUAN_PRICE,SELL_CHANEL,COLLAB_ID,CUSTOMER_NAME,
-            CUSTOMER_PHONE,CUSTOMER_ADDRESS,SELL_PRICE,SHIPPING_FEE,OTHERS_FEE,DEPOSIT,PAYMENT,NOTE,ORDER_DATE) 
+            CUSTOMER_PHONE,CUSTOMER_ADDRESS,SELL_PRICE,SHIPPING_FEE,OTHERS_FEE,PAYMENT,DEPOSIT,BALANCE,NOTE,ORDER_DATE) 
                   VALUES('$order_id','$product_quan_price','$chanel','$collab_id','$cus_name','$cus_phone',
-                  '$cus_address','$sell_price','$ship_fee','$others_fee','$deposit','$payment','$note','$order_date')";
+                  '$cus_address','$sell_price','$ship_fee','$others_fee','$payment','$deposit','$balance','$note','$order_date')";
             $result = $this->db->insert($query);
 
             if($result){
@@ -62,9 +63,19 @@
         public function show_order(){
             $query = "SELECT tbl_order.*, tbl_collaborator.COLLAB_NAME 
                     FROM tbl_order INNER JOIN tbl_collaborator
-                    ON  tbl_order.COLLAB_ID = tbl_collaborator.COLLAB_ID";
+                    ON  tbl_order.COLLAB_ID = tbl_collaborator.COLLAB_ID
+                    WHERE STATUS_ORDER = 'PENDING'";
             $result = $this->db->select($query);
             return $result;
+        }
+
+        //Markdone order
+        public function markdone_order($markdoneID){
+            $query = "UPDATE tbl_order SET
+                    STATUS_ORDER = 'DONE'
+                    WHERE ORDER_ID ='$markdoneID'";
+            $result = $this->db->update($query);
+            header('Location:index.php');
         }
 
         //Delete apartment selling

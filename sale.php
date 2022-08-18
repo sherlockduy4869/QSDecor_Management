@@ -7,17 +7,17 @@
     $orderClass = new orderClass();
     $orderList = $orderClass->show_order();
 
-    if(isset($_GET['delID']))
-    {
-        $delID = $_GET['delID'];
-        $delOrder = $orderClass->delete_order($delID);
-    }  
+    // if(isset($_GET['delID']))
+    // {
+    //     $delID = $_GET['delID'];
+    //     $delOrder = $orderClass->delete_order($delID);
+    // }  
 
-    if(isset($_GET['markdoneID']))
-    {
-        $markdoneID = $_GET['markdoneID'];
-        $markdoneOrder = $orderClass->markdone_order($markdoneID);
-    }  
+    // if(isset($_GET['markdoneID']))
+    // {
+    //     $markdoneID = $_GET['markdoneID'];
+    //     $markdoneOrder = $orderClass->markdone_order($markdoneID);
+    // }  
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -31,6 +31,13 @@
                 <div class="title">
                     <i class="fa-solid fa-bell"></i>
                     <span class="text">ORDER LIST</span>
+                </div>
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total</span>
+                        <span class="number">10000</span>
+                    </div>
                 </div>
             <div class="activity">
                 <div class="board">
