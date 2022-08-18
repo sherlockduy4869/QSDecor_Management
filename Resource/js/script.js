@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+    //Jquery animate counting
+    $(".num").counterUp();
+
     const body = document.querySelector("body"),
          modeToggle = body.querySelector(".mode-toggle"),
          sidebar = body.querySelector("nav"),
@@ -34,7 +38,4 @@ $(document).ready(function(){
     $('.clickable').click(function(){
         window.location = $(this).find("a").attr("href");
     });
-
-    //Jquery animate counting
-    $(".num").counterUp();
 })

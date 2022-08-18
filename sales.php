@@ -28,7 +28,7 @@
                     <div class="box box1">
                         <i class="fa-solid fa-money-bill"></i>
                         <span class="text">Total</span>
-                        <span class="number"><span class="num">10000</span><sup>đ</sup></span>
+                        <span class="number num">10</span>
                     </div>
                 </div>
             <div class="activity">
