@@ -1,5 +1,6 @@
 <?php
     ob_start();
+    date_default_timezone_set("Asia/Ho_Chi_Minh");
 ?>
 <html lang="en">
 <head>

@@ -40,6 +40,7 @@
                                 <th>Email</th>
                                 <th>Bank Name</th>
                                 <th>Bank Number</th>
+                                <th>Sales</th>
                                 <th>Customize</th>
                         </thead>
                         <?php
@@ -70,6 +71,9 @@
                                 </td>
                                 <td class="active">
                                     <p><?php echo $result['COLLAB_BANK_NUMBER'];?></p>
+                                </td>
+                                <td class="edit">
+                                    <a style="color: red;" href="collabSales.php?saleID=<?php echo $result['COLLAB_ID'];?>">Sales</a>
                                 </td>
                                 <td class="edit">
                                     <a href="collabEdit.php?editID=<?php echo $result['COLLAB_ID'];?>">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['COLLAB_ID'];?>">Delete</a>

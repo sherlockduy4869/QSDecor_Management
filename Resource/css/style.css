@@ -371,6 +371,26 @@ form .user-details .input-box{
     width: calc(100%/2 - 20px);
 }
 
+/*--COLLAB SALES AREA--*/
+.container.collab_sale_area{
+    max-width: 400px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+form .user-details .input-box.collab_sale{
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+}
+
+.get_saleID{
+    display: none;
+}
+
+/*--END--*/
+
 .user-details .input-box .details{
     display: block;
     font-weight: 500;

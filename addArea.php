@@ -17,17 +17,17 @@
                 </div>
 
                 <div class="boxes">
-                    <div class="box box1">
+                    <div class="box box1 clickable">
                         <i class="fa-solid fa-circle-plus"></i>
                         <span class="number"><a class="add_area" href="orderAdd.php">ADD ORDER</a></span>
                     </div>
 
-                    <div class="box box2">
+                    <div class="box box2 clickable">
                         <i class="fa-solid fa-circle-plus"></i>
                         <span class="number"><a class="add_area" href="collabAdd.php">ADD PARTNER</a></span>
                     </div>
 
-                    <div class="box box3">
+                    <div class="box box3 clickable">
                         <i class="fa-solid fa-circle-plus"></i>
                         <span class="number"><a class="add_area" href="#">ADD USER</a></span>
                     </div>
