@@ -10,6 +10,10 @@ $(document).ready(function(){
         sidebar.classList.toggle("close");
     }
 
+    //Change format of select tag to select2
+    $('#chanel_list').select2();
+    $('#collab_list').select2();
+
     //Display and hide menu bar
     sidebarToggle.addEventListener("click", function(){
         sidebar.classList.toggle("close");

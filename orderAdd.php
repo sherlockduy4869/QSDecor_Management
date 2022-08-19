@@ -37,20 +37,18 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Sell Chanel</span>
-                            <input list="chanel_list" name="chanel" required>
-                            <datalist id="chanel_list">
+                            <select name="chanel" id="chanel_list">
                                 <option value="Facebook">Facebook</option>
                                 <option value="Cho Tot">Cho Tot</option>
                                 <option value="Zalo">Zalo</option>
                                 <option value="Shoppee">Shoppee</option>
                                 <option value="Gioi Thieu">Gioi Thieu</option>
                                 <option value="Others">Others</option>
-                            </datalist>
+                            </select>
                         </div>
                         <div class="input-box">
                             <span class="details">Partner</span>
-                            <input list="collab_list" name="collab" required>
-                            <datalist id="collab_list">
+                            <select name="collab" id="collab_list">
                                 <?php
                                     if($collabList)
                                     {   
@@ -64,7 +62,7 @@
                                         }
                                     }
                                 ?>
-                            </datalist>
+                            </select>
                         </div>
                         <div class="input-box">
                             <span class="details">Total Sell Price</span>
