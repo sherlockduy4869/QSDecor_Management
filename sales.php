@@ -7,6 +7,9 @@
     $orderClass = new orderClass();
     $salesList = $orderClass->show_sales();
 
+    $current_month = date("m");
+    $current_year = date("Y");
+    $get_current_income = $orderClass->get_income_month($current_month,$current_year)->fetch_assoc()['TOTAL_INCOME'];
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">
@@ -22,13 +25,13 @@
                     <span class="text">SALES LIST</span>
                 </div>
                 <div class="date">
-                    <input type="date">
+                    <input class="month_chossing" value="<?php echo date("Y-m-d"); ?>" type="date">
                 </div>
                 <div class="boxes">
                     <div class="box box1">
                         <i class="fa-solid fa-money-bill"></i>
                         <span class="text">Total</span>
-                        <span class="number num">10</span>
+                        <span class="number total_income"><span><?php echo number_format($get_current_income)?><sup>đ</sup></span></span>
                     </div>
                 </div>
             <div class="activity">

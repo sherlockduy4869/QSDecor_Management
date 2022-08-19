@@ -90,6 +90,8 @@
 
 
         /*--------------------SALE AREA--------------------*/
+
+        //Show all sales
         public function show_sales(){
             $query = "SELECT tbl_order.*, tbl_collaborator.COLLAB_NAME 
                     FROM tbl_order INNER JOIN tbl_collaborator
@@ -98,5 +100,14 @@
             $result = $this->db->select($query);
             return $result;
         }
+
+        //Get total income in specific month
+        public function get_income_month($month_choosing, $year_choosing){
+            $query = "SELECT SUM(tbl_order.BALANCE) AS TOTAL_INCOME FROM tbl_order WHERE MONTH(ORDER_DATE) = '$month_choosing' AND YEAR(ORDER_DATE) = '$year_choosing'";
+            $result = $this->db->select($query);
+            return $result;
+            header('Location:sales.php');
+        }
+
     }
 ?>
