@@ -40,7 +40,7 @@ $(document).ready(function(){
         window.location = $(this).find("a").attr("href");
     });
 
-    //get changed total income
+    //get changed total income for sales.php
     function fetch_data(){
         var date = $('.month_chossing').val();
         var date_choosing = new Date(date);
@@ -64,6 +64,34 @@ $(document).ready(function(){
     //get changed month
     $('.month_chossing').on('change', function(){
         fetch_data();
+    });
+
+    //get changed total income for collabSales.php
+    function fetch_data_by_collab_id(){
+        var collab_id = $('.collab_id').val();
+        var time = $('.time_choosing').val();
+        var time_choosing = new Date(time);
+        if(!!time_choosing.valueOf()){
+            var time_month_choosing = time_choosing.getMonth()+1;
+            var time_year_choosing = time_choosing.getFullYear();
+            $.ajax({
+                url: "total_income_ajax.php",
+                method: "POST",
+                data:{
+                    time_month_choosing:time_month_choosing,
+                    time_year_choosing: time_year_choosing,
+                    collab_id:collab_id
+                },
+                success:function(data){
+                    $('.collab_sale_value').val(data);
+                }
+            });
+        }
+    }
+
+    //get changed month
+    $('.time_choosing').on('change', function(){
+        fetch_data_by_collab_id();
     });
 
     //Jquery animate counting

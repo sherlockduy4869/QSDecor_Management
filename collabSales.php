@@ -37,15 +37,15 @@
                         </div>
                         <div class="input-box collab_sale">
                             <span class="details">Moonth</span>
-                            <input type="date" value="<?php echo date("Y-m-d"); ?>">
+                            <input class="time_choosing" type="date" value="<?php echo date("Y-m-d"); ?>">
                         </div>
                         <div class="input-box collab_sale">
                             <span class="details">Sales</span>
-                            <input value="<?php echo number_format($collabSales['TOTAL_INCOME']).' VND'; ?>" type="text">
+                            <input class="collab_sale_value" value="<?php echo number_format($collabSales['TOTAL_INCOME']).' VND'; ?>" type="text">
                         </div>
                         <div class="input-box collab_sale get_saleID">
                             <span class="details">Partner ID</span>
-                            <input value="<?php echo $collab_id; ?>" type="hidden">
+                            <input class="collab_id" value="<?php echo $collab_id; ?>" type="hidden">
                         </div>
                     </div>
                     <div class="button">
