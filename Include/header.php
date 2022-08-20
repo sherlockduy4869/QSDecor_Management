@@ -1,6 +1,8 @@
 <?php
     ob_start();
     date_default_timezone_set("Asia/Ho_Chi_Minh");
+    include $_SERVER['DOCUMENT_ROOT'].'/Lib/session.php';
+    Session::checkSession();
 ?>
 <html lang="en">
 <head>
