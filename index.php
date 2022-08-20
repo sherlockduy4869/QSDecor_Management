@@ -41,7 +41,7 @@
                                 <th>ORDER INFO</th>
                                 <th>IN CHARGE</th>
                                 <th>CUSTOMER INFO</th>
-                                <th>TOTAL PRICE</th>
+                                <th>TOTAL AMOUNT</th>
                                 <th>SHIPPING FEE</th>
                                 <th>OTHERS FEE</th>
                                 <th>PAYMENT</th>
@@ -101,7 +101,8 @@
                                     <p><?php echo $order_date;?></p>
                                 </td>
                                 <td class="edit">
-                                    <a onclick="return confirm('Do you want to markdone ?')" href="?markdoneID=<?php echo $result['ORDER_ID'];?>">Markdone</a><br><a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a>
+                                <a style="color: #41f1b6;" href="orderEdit.php?editID=<?php echo $result['ORDER_ID'];?>">Edit</a>|<a style="color: #ff7782;" onclick="return confirm('Do you want to delete ?')" href="?delID=<?php echo $result['ORDER_ID']; ?>">DELETE</a><br>
+                                <a onclick="return confirm('Do you want to markdone ?')" href="?markdoneID=<?php echo $result['ORDER_ID'];?>">Markdone</a>
                                 </td>
                             </tr>
                         </tbody>

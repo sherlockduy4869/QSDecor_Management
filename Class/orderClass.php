@@ -71,6 +71,66 @@
             return $result;
         }
 
+        //Edit order information
+        public function edit_order($data, $order_id){
+            $product_quan_price = mysqli_real_escape_string($this->db->link, $data['product_quan_price']);
+            $chanel = mysqli_real_escape_string($this->db->link, $data['chanel']);
+            $collab_id = mysqli_real_escape_string($this->db->link, $data['collab']);
+            $sell_price = mysqli_real_escape_string($this->db->link, $data['sell_price']);
+            $cus_name = mysqli_real_escape_string($this->db->link, $data['cus_name']);
+            $ship_fee = mysqli_real_escape_string($this->db->link, $data['shipping_fee']);
+            $cus_phone = mysqli_real_escape_string($this->db->link, $data['cus_phone']);
+            $deposit = mysqli_real_escape_string($this->db->link, $data['deposit']);
+            $cus_address = mysqli_real_escape_string($this->db->link, $data['cus_address']);
+            $others_fee = mysqli_real_escape_string($this->db->link, $data['others_fee']);
+            $note = mysqli_real_escape_string($this->db->link, $data['note']);
+            
+            $sell_price =  str_replace(",","",$sell_price);
+            $ship_fee = str_replace(",","",$ship_fee);
+            $deposit =  str_replace(",","",$deposit);
+            $others_fee = str_replace(",","",$others_fee);
+            
+            $payment = $sell_price + $ship_fee + $others_fee;
+            $balance = $payment - $deposit;
+
+            $query = "UPDATE tbl_order SET
+            PRODUCT_QUAN_PRICE = '$product_quan_price'
+            ,SELL_CHANEL = '$chanel'
+            ,COLLAB_ID = '$collab_id'
+            ,CUSTOMER_NAME = '$cus_name'
+            ,CUSTOMER_PHONE = '$cus_phone'
+            ,CUSTOMER_ADDRESS = '$cus_address'
+            ,SELL_PRICE = '$sell_price'
+            ,SHIPPING_FEE = '$ship_fee'
+            ,OTHERS_FEE = '$others_fee'
+            ,PAYMENT = '$payment'
+            ,DEPOSIT = '$deposit'
+            ,BALANCE = '$balance'
+            ,NOTE = '$note'
+            WHERE ORDER_ID ='$order_id'";    
+
+            $result = $this->db->update($query);
+
+            if($result){
+                $alert = "<span class = 'addSuccess'>Edit order succesfully</span> <br>";
+                return $alert;
+            }
+            else{
+                $alert = "<span class = 'addError'>Edit order failed</span> <br>";
+                return $alert;
+            }
+        }
+
+        //Get order information by id
+        public function get_order_by_id($order_id){
+            $query = "SELECT tbl_order.*, tbl_collaborator.COLLAB_NAME 
+                    FROM tbl_order INNER JOIN tbl_collaborator
+                    ON  tbl_order.COLLAB_ID = tbl_collaborator.COLLAB_ID
+                    WHERE ORDER_ID = '$order_id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
         //Markdone order
         public function markdone_order($markdoneID){
             $query = "UPDATE tbl_order SET
