@@ -24,7 +24,7 @@
                     <i class="fas fa-user-check"></i>
                     <span class="link-name">PARTNER</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="user.php">
                     <i class="fa-solid fa-users"></i>
                     <span class="link-name">USER</span>
                 </a></li>

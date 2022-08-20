@@ -29,7 +29,7 @@
 
                     <div class="box box3 clickable">
                         <i class="fa-solid fa-circle-plus"></i>
-                        <span class="number"><a class="add_area" href="#">ADD USER</a></span>
+                        <span class="number"><a class="add_area" href="userAdd.php">ADD USER</a></span>
                     </div>
                 </div>
             </div>

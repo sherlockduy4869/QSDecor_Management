@@ -32,7 +32,7 @@
                 </div>
                 <div class="control">
                     <label for="password">Password</label>
-                    <input required type="text" name="password">
+                    <input required type="password" name="password">
                 </div>
                 <div class="control">
                     <input type="submit" name="submit" value="LOGIN">
