@@ -163,14 +163,14 @@
 
         //Get total income in specific month
         public function get_income_month($month_choosing, $year_choosing){
-            $query = "SELECT SUM(tbl_order.BALANCE) AS TOTAL_INCOME FROM tbl_order WHERE MONTH(ORDER_DATE) = '$month_choosing' AND YEAR(ORDER_DATE) = '$year_choosing'";
+            $query = "SELECT SUM(tbl_order.BALANCE) AS TOTAL_INCOME FROM tbl_order WHERE MONTH(ORDER_DATE) = '$month_choosing' AND YEAR(ORDER_DATE) = '$year_choosing' AND STATUS_ORDER = 'DONE'";
             $result = $this->db->select($query);
             return $result;
         }
 
         //Get total income in specific month by collab id
         public function get_income_month_by_collab_id($collab_id,$month_choosing, $year_choosing){
-            $query = "SELECT SUM(tbl_order.BALANCE) AS TOTAL_INCOME FROM tbl_order WHERE COLLAB_ID = '$collab_id' AND MONTH(ORDER_DATE) = '$month_choosing' AND YEAR(ORDER_DATE) = '$year_choosing'";
+            $query = "SELECT SUM(tbl_order.BALANCE) AS TOTAL_INCOME FROM tbl_order WHERE COLLAB_ID = '$collab_id' AND MONTH(ORDER_DATE) = '$month_choosing' AND YEAR(ORDER_DATE) = '$year_choosing' AND STATUS_ORDER = 'DONE'";
             $result = $this->db->select($query);
             return $result;
         }

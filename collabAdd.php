@@ -51,6 +51,14 @@
                             <span class="details">Partner Email</span>
                             <input type="email" name="collab_email">
                         </div>
+                        <div class="input-box">
+                            <span class="details"></span>
+                            <input type="hidden">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Partner CCCD</span>
+                            <input type="text" name="collab_cccd">
+                        </div>
                     </div>
                     <?php 
                     if(isset($collabAdd))

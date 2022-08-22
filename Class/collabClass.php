@@ -22,22 +22,23 @@
             $collab_phone = mysqli_real_escape_string($this->db->link, $data['collab_phone']);
             $collab_zalo = mysqli_real_escape_string($this->db->link, $data['collab_zalo']);
             $collab_email = mysqli_real_escape_string($this->db->link, $data['collab_email']);
+            $collab_cccd = mysqli_real_escape_string($this->db->link, $data['collab_cccd']);
             $bank_name = mysqli_real_escape_string($this->db->link, $data['bank_name']);
             $bank_number = mysqli_real_escape_string($this->db->link, $data['bank_number']);
             
             $bytes = random_bytes(6);
             $collab_id = 'COL.'.bin2hex($bytes);
 
-            $query = "INSERT INTO tbl_collaborator(COLLAB_ID,COLLAB_NAME,COLLAB_PHONE,COLLAB_ZALO,COLLAB_EMAIL,COLLAB_BANK_NAME,COLLAB_BANK_NUMBER) 
-                  VALUES('$collab_id','$collab_name','$collab_phone','$collab_zalo','$collab_email','$bank_name','$bank_number')";
+            $query = "INSERT INTO tbl_collaborator(COLLAB_ID,COLLAB_NAME,COLLAB_PHONE,COLLAB_ZALO,COLLAB_EMAIL,COLLAB_CCCD,COLLAB_BANK_NAME,COLLAB_BANK_NUMBER) 
+                  VALUES('$collab_id','$collab_name','$collab_phone','$collab_zalo','$collab_email','$collab_cccd','$bank_name','$bank_number')";
             $result = $this->db->insert($query);
 
             if($result){
-                $alert = "<span class = 'addSuccess'>Add new collaborator succesfully</span> <br>";
+                $alert = "<span class = 'addSuccess'>Add new partner succesfully</span> <br>";
                 return $alert;
             }
             else{
-                $alert = "<span class = 'addError'>Add new collaborator failed</span> <br>";
+                $alert = "<span class = 'addError'>Add new partner failed</span> <br>";
                 return $alert;
             }
         }
@@ -48,6 +49,7 @@
             $collab_phone = mysqli_real_escape_string($this->db->link, $data['collab_phone']);
             $collab_zalo = mysqli_real_escape_string($this->db->link, $data['collab_zalo']);
             $collab_email = mysqli_real_escape_string($this->db->link, $data['collab_email']);
+            $collab_cccd = mysqli_real_escape_string($this->db->link, $data['collab_cccd']);
             $bank_name = mysqli_real_escape_string($this->db->link, $data['bank_name']);
             $bank_number = mysqli_real_escape_string($this->db->link, $data['bank_number']);
 
@@ -56,17 +58,18 @@
                     ,COLLAB_PHONE = '$collab_phone'
                     ,COLLAB_ZALO = '$collab_zalo'
                     ,COLLAB_EMAIL = '$collab_email'
+                    ,COLLAB_CCCD = '$collab_cccd'
                     ,COLLAB_BANK_NAME = '$bank_name'
                     ,COLLAB_BANK_NUMBER = '$bank_number'
                     WHERE COLLAB_ID ='$collab_id'";
             $result = $this->db->update($query);
 
             if($result){
-                $alert = "<span class = 'addSuccess'>Edit collaborator infor succesfully</span> <br>";
+                $alert = "<span class = 'addSuccess'>Edit partner infor succesfully</span> <br>";
                 return $alert;
             }
             else{
-                $alert = "<span class = 'addError'>Edit collaborator inforfailed</span> <br>";
+                $alert = "<span class = 'addError'>Edit partner inforfailed</span> <br>";
                 return $alert;
             }
         }

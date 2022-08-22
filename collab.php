@@ -38,6 +38,7 @@
                                 <th>Phone</th>
                                 <th>Zalo</th>
                                 <th>Email</th>
+                                <th>CCCD</th>
                                 <th>Bank Name</th>
                                 <th>Bank Number</th>
                                 <th>Sales</th>
@@ -65,6 +66,9 @@
                                 </td>
                                 <td class="role">
                                     <p><?php echo $result['COLLAB_EMAIL'];?></p>
+                                </td>
+                                <td class="role">
+                                    <p><?php echo $result['COLLAB_CCCD'];?></p>
                                 </td>
                                 <td class="role">
                                     <p><?php echo $result['COLLAB_BANK_NAME'];?></p>

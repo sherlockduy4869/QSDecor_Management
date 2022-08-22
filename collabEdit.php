@@ -57,6 +57,14 @@
                             <span class="details">Partner Email</span>
                             <input value="<?php echo $collabInfo['COLLAB_EMAIL'] ?>" type="email"required name="collab_email">
                         </div>
+                        <div class="input-box">
+                            <span class="details"></span>
+                            <input type="hidden">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Partner CCCD</span>
+                            <input value="<?php echo $collabInfo['COLLAB_CCCD'] ?>" type="text" name="collab_cccd">
+                        </div>
                     </div>
                     <?php 
                     if(isset($collabEdit))
