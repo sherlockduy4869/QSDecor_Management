@@ -10,6 +10,9 @@
     $current_month = date("m");
     $current_year = date("Y");
     $get_current_income = $orderClass->get_income_month($current_month,$current_year)->fetch_assoc()['TOTAL_INCOME'];
+    if(!$get_current_income){
+        $get_current_income = 0;
+    }
 ?>
     <!--DASHBOARD AREA-->
     <section class="dashboard">

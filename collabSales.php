@@ -14,7 +14,10 @@
         $current_year = date("Y");
 
         $collabInfo = $collabClass->get_collab_info_by_id($collab_id)->fetch_assoc();
-        $collabSales = $orderClass->get_income_month_by_collab_id($collab_id,$current_month,$current_year)->fetch_assoc();
+        $collabSales = $orderClass->get_income_month_by_collab_id($collab_id,$current_month,$current_year)->fetch_assoc()['TOTAL_INCOME'];
+        if(!$collabSales){
+            $collabSales = 0;
+        }
     }  
 ?>
 <!--DASHBOARD AREA-->
@@ -41,7 +44,7 @@
                         </div>
                         <div class="input-box collab_sale">
                             <span class="details">Sales</span>
-                            <input class="collab_sale_value" value="<?php echo number_format($collabSales['TOTAL_INCOME']).' VND'; ?>" type="text">
+                            <input class="collab_sale_value" value="<?php echo number_format($collabSales).' VND'; ?>" type="text">
                         </div>
                         <div class="input-box collab_sale get_saleID">
                             <span class="details">Partner ID</span>

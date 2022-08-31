@@ -1,8 +1,9 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'/Lib/session.php';
+    Session::checkLogin();
     include_once $_SERVER['DOCUMENT_ROOT'].'/Lib/database.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/Helpers/format.php';
-    Session::checkLogin();
+    
 ?>
 
 <?php
